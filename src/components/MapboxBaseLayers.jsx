@@ -14,18 +14,19 @@ export default class MapboxBaseLayers extends React.Component {
                 'satellite',
                 'No map'
             ],
-            selected: 'dark'
+            selected: props.dark ? "dark" : "streets"
         }
     }
 
     render() { 
         const {selected, bases} = this.state;
-        const {onSelectCallback} = this.props;
+        const {onSelectCallback, dark} = this.props;
         // console.log(selected);
         
         return(
           <MultiSelect
-            title={selected === 'dark' ? "Default(dark)" : selected}
+            title={selected === 'dark' ? "Default(dark)" : 
+            !dark ? "Default(streets)" : selected}
             single={true}
             values={
               bases.map(e => ({ id: e, value: e }))

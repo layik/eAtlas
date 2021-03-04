@@ -84,7 +84,7 @@ const LIGHT_SETTINGS = {
 };
 
 const initMultiVarSelect = {
-  year: new Set(["2011"]),
+  year: new Set(["2018"]),
   age: new Set(["1-14"]),
   sex: new Set(["1"]),
   ethnicity: new Set(["15"])
@@ -127,7 +127,7 @@ export default class Welcome extends React.Component {
       iconLimit: 500,
       legend: false,
       column: "population",
-      saey: "1122012"
+      saey: "1122018"
     }
     this._generateLayer = this._generateLayer.bind(this)
     this._renderTooltip = this._renderTooltip.bind(this);
@@ -235,9 +235,11 @@ export default class Welcome extends React.Component {
     let { filter } = values
 
     if (filter && filter.what === 'mapstyle') {
+      const newStyle = "mapbox://styles/mapbox/" + filter.selected + "-v9";
       this.setState({
         mapStyle: !MAPBOX_ACCESS_TOKEN ? osmtiles :
-          filter && filter.what === 'mapstyle' ? "mapbox://styles/mapbox/" + filter.selected + "-v9" : this.state.mapStyle,
+          filter && filter.what === 'mapstyle' ?  filter.selected === "No map" ?
+          Constants.BLANKSTYLE : newStyle : this.state.mapStyle,
       })
       return;
     }

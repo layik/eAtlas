@@ -7,12 +7,12 @@ import MultiSelect from '../MultiSelect';
 
 const Spenser = (props) => {
   const { saeyCallback } = props;
-  const [year, setYear] = useState([2012])
+  const [year, setYear] = useState([2018])
   const [age, setAge] = useState(1)
   const [eth, setEth] = useState(2)
   const [sex, setSex] = useState("1")
 
-  const years = Array.from(Array(40), (_, i) => i + 2011);
+  const years = Array.from(Array(33), (_, i) => i + 2018);
   const eths = Object.keys(lookup.eth);
 
   return (

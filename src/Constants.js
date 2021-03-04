@@ -27,3 +27,14 @@ define("LAYERSTYLES", [
   "sgrid",
   "barvis"
 ])     
+
+define("BLANKSTYLE", {
+  "version": 8, "name": "Blank", "center": [0, 0],
+  "zoom": 0, "sources": {},
+  "sprite": "file://roblabs.com/sprite",
+  "glyphs": "file://roblabs.com/fonts/mapbox/{fontstack}/{range}.pbf",
+  "layers": [{
+    "id": "background", "type": "background", "paint":
+      { "background-color": "rgba(255,255,255,1)" }
+  }], "id": "blank"
+})
