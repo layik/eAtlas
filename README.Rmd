@@ -1,65 +1,20 @@
 ---
 output: github_document
 ---
-# eAtlas &middot; [![Build Status](https://travis-ci.org/layik/eAtlas.svg)](https://travis-ci.org/layik/eAtlas) [![Project Status: WIP](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#)
 
-#### This README is for branch `spenser` 
+# eAtlas · [![Node CI](https://github.com/layik/eAtlas/workflows/Node%20CI/badge.svg?branch=master)](https://github.com/layik/eAtlas/actions?query=workflow%3A%22Node+CI%22)
+#### This README is for branch `spenser`
 
-The `eAtlas` project itself has a different README. 
+The `eAtlas` project itself has a different README.
 
 ### SPENSER
-TODO: add project details here, description of the data processing and vis.
 
-The rest of the document, outlining development and deployment of the app is the same.
+For development and production config/instructions see the "master" branch.
 
-### Development
-The front end is an npm package, so if you do not need the backend, having cloned the repo:
+This branch is built over at hub.docker.com/layik:spenser
 
-```{js}
-npm i # or yarn
-# and run
-npm start
-```
+It is also pulled form our server on www.geospenser.com
 
-The frontend is a [`create-react-app`](https://create-react-app.dev/docs/getting-started/) (CRA) so all the standard commands of CRA appliees.
+## News/changes
 
-### R 
-The whole application is a [geopumber](https://github.com/ATFutures/geoplumber) app. That means it is an R powered backend API (think Flask in Python) and a ReactJS front end.
-
-To build the frontend, from an R console:
-```{r, eval=FALSE}
-library(geoplumber)
-gp_build()
-```
-
-Before you run the app:
-
-* you will need some preprocessed data, an RDS called "ac_joined_wy_2009-2017.Rds".
-
-* you will need a Mapbox API key (will see if we can remove this) in `.env.local` file using variable name:
-`REACT_APP_MAPBOX_ACCESS_TOKEN = 'API_KEY'`
-
-* in production its better to change the `PRD_URL` in the `Constants.js` file.
-
-Then you can run
-```{r, eval=FALSE}
-library(geoplumber)
-gp_plumb()
-```
-
-visit `localhost:8000`
-
-or just run the front using (without any data loaded from local server): `npm i & npm start`
-
-### Docker for production
-
-Repo contains Dockerfile for production. This is again WIP. 
-
-```{sh, eval= FALSE}
-# Dockerfile manages your npm/React build steps
-# REACT_APP_MAPBOX_ACCESS_TOKEN is required but app should run
-docker build -t eatlas .
-# then bind plumber's default 8000 port to any of your choice
-docker run -d -p 8000:8001 --name eatlas eatlas
-````
-Use your favourite document server (nginx for example) to proxy requets (more later hopefully).
+* Feb/March 2021 dump population data under 2018. See private repo for details.
