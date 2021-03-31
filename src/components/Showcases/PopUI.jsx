@@ -4,15 +4,16 @@ import { RadioGroup, Radio } from "baseui/radio";
 import { Button } from 'baseui/button';
 
 import MultiSelect from '../MultiSelect';
+import { DEFAULT_YEAR } from '../../Constants';
 
 const Spenser = (props) => {
   const { saeyCallback } = props;
-  const [year, setYear] = useState([2018])
+  const [year, setYear] = useState([DEFAULT_YEAR])
   const [age, setAge] = useState(1)
   const [eth, setEth] = useState(2)
   const [sex, setSex] = useState("1")
 
-  const years = Array.from(Array(33), (_, i) => i + 2018);
+  const years = Array.from(Array(33), (_, i) => i + DEFAULT_YEAR);
   const eths = Object.keys(lookup.eth);
 
   return (

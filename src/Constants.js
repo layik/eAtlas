@@ -38,3 +38,5 @@ define("BLANKSTYLE", {
       { "background-color": "rgba(255,255,255,1)" }
   }], "id": "blank"
 })
+
+define("DEFAULT_YEAR", 2011)

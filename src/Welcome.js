@@ -84,7 +84,7 @@ const LIGHT_SETTINGS = {
 };
 
 const initMultiVarSelect = {
-  year: new Set(["2018"]),
+  year: new Set([Constants.DEFAULT_YEAR+""]),
   age: new Set(["1-14"]),
   sex: new Set(["1"]),
   ethnicity: new Set(["15"])

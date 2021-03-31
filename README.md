@@ -16,5 +16,5 @@ It is also pulled form our server on www.geospenser.com
 
 ## News/changes
 
-  - Feb/March 2021 dump population data under 2018. See private repo for
-    details.
+  - ~Feb/March 2021 dump population data under 2018. See private repo for
+    details.~
