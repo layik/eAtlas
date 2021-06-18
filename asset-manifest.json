@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/eAtlas/static/css/main.b8adc322.chunk.css",
+    "main.js": "/eAtlas/static/js/main.572eed9d.chunk.js",
+    "main.js.map": "/eAtlas/static/js/main.572eed9d.chunk.js.map",
+    "runtime-main.js": "/eAtlas/static/js/runtime-main.0a22166a.js",
+    "runtime-main.js.map": "/eAtlas/static/js/runtime-main.0a22166a.js.map",
+    "static/js/2.6cf07b4c.chunk.js": "/eAtlas/static/js/2.6cf07b4c.chunk.js",
+    "static/js/2.6cf07b4c.chunk.js.map": "/eAtlas/static/js/2.6cf07b4c.chunk.js.map",
+    "static/js/3.4bc20b6d.chunk.js": "/eAtlas/static/js/3.4bc20b6d.chunk.js",
+    "static/js/3.4bc20b6d.chunk.js.map": "/eAtlas/static/js/3.4bc20b6d.chunk.js.map",
+    "index.html": "/eAtlas/index.html",
+    "static/css/main.b8adc322.chunk.css.map": "/eAtlas/static/css/main.b8adc322.chunk.css.map",
+    "static/js/2.6cf07b4c.chunk.js.LICENSE.txt": "/eAtlas/static/js/2.6cf07b4c.chunk.js.LICENSE.txt",
+    "static/media/location-icon-atlas.37a766e0.png": "/eAtlas/static/media/location-icon-atlas.37a766e0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0a22166a.js",
+    "static/js/2.6cf07b4c.chunk.js",
+    "static/css/main.b8adc322.chunk.css",
+    "static/js/main.572eed9d.chunk.js"
+  ]
+}
